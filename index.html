@@ -151,6 +151,322 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-09.字体阴影" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="字体阴影"><a href="#字体阴影" class="headerlink" title="字体阴影"></a>字体阴影</h1><p>标签（空格分隔）： CSS3</p>
+<hr>
+<p><img src="http://static.zybuluo.com/antumuFish/xfnngpb23mze67n7y3y9ir3l/desk.jpg" alt="前端与移动开发学院"></p>
+<blockquote>
+<p>这个属性的使用十分类似<code>box-shadow</code></p>
+</blockquote>
+<h2 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h2><ul>
+<li><p><strong>属性名:</strong> text-shadow</p>
+</li>
+<li><p><strong>赋值方法_3个值:</strong></p>
+<ul>
+<li>5px 5px red</li>
+<li>x偏移值,y偏移值,阴影颜色<br><img src="imgs/字体阴影.png" alt="字体阴影.png-9.6kB"></li>
+</ul>
+</li>
+<li><p><strong>赋值方法_4个值:</strong></p>
+<ul>
+<li>5px 5px 10px pink</li>
+<li>x偏移值,y偏移值,阴影模糊程度,阴影颜色<br><img src="imgs/字体阴影_模糊.png" alt="字体阴影_模糊.png-20.4kB"></li>
+</ul>
+</li>
+<li><p>赋值方法_多个阴影</p>
+<ul>
+<li>5px 5px red,10px 10px yellow;</li>
+<li>通过<code>逗号</code>的来分隔不同的阴影<br><img src="imgs/字体阴影_多个阴影.png" alt="字体阴影_多个阴影.png-11.1kB"></li>
+</ul>
+</li>
+</ul>
+<h2 id="Demo-凹凸文字"><a href="#Demo-凹凸文字" class="headerlink" title="Demo(凹凸文字)"></a>Demo(凹凸文字)</h2><blockquote>
+<p>首先让我们来看看字体的具体外观</p>
+</blockquote>
+<p><img src="imgs/凹凸字体实例.png" alt="凹凸字体实例.png-20.4kB"></p>
+<ul>
+<li><strong>凹字体:</strong><ul>
+<li>参照上图,当阳光从左上角照射时,字体是<code>凹</code>进去时,内部的轮廓线会被照射为白色</li>
+</ul>
+</li>
+<li><strong>凸字体:</strong><ul>
+<li>参照上图,当阳光从左上角照射时,字体是<code>凸</code>起时,右上角的轮廓线会被照射为白色</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>分析:</strong></p>
+<ul>
+<li>阳光照射的轮廓线在上或者是在下就可以让我们产生这是<code>凹</code>,<code>凸</code>字体的错觉</li>
+</ul>
+</li>
+<li><p><strong>具体代码:</strong></p>
+</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></div><div class="line">        <span class="selector-tag">body</span>&#123;</div><div class="line">            <span class="attribute">background-color</span>:gray;</div><div class="line">        &#125;</div><div class="line">        <span class="selector-tag">a</span>&#123;</div><div class="line">            <span class="comment">/*字体阴影*/</span></div><div class="line">            <span class="comment">/*x偏移值  y偏移值 (阴影的面积不能给负值)  字体颜色 多个之间使用逗号分隔*/</span></div><div class="line">            <span class="attribute">text-decoration</span>: none;</div><div class="line">            <span class="attribute">font</span>:bolder <span class="number">3em</span> <span class="string">"微软雅黑"</span>;</div><div class="line">            <span class="attribute">color</span>: gray;</div><div class="line">        &#125;</div><div class="line">        <span class="selector-class">.ao</span>&#123;</div><div class="line">          <span class="attribute">text-shadow</span>: <span class="number">1px</span> <span class="number">1px</span> <span class="number">#fff</span>,-<span class="number">1px</span> -<span class="number">1px</span> <span class="number">#000</span>;</div><div class="line">        &#125;</div><div class="line">        <span class="selector-class">.tu</span>&#123;</div><div class="line">            <span class="attribute">text-shadow</span>: <span class="number">1px</span> <span class="number">1px</span> <span class="number">#000</span>,-<span class="number">1px</span> -<span class="number">1px</span> <span class="number">#fff</span>;</div><div class="line">        &#125;</div><div class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span> <span class="attr">class</span>=<span class="string">"ao"</span>&gt;</span>点击去看魔兽世界大电影_凹下<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span> <span class="attr">class</span>=<span class="string">"tu"</span>&gt;</span>点击去看魔兽世界大电影_凸起<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/01/18/09.字体阴影/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-08.边框阴影" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="边框阴影"><a href="#边框阴影" class="headerlink" title="边框阴影"></a>边框阴影</h1><p>标签（空格分隔）： CSS3</p>
+<hr>
+<p><img src="imgs/desk.jpg" alt="前端与移动开发学院"></p>
+<blockquote>
+<p>除了可以为元素的四周设置倒圆角以外,CSS3还为我们提供了阴影的功能,能够制作更为精美的外观<br><a href="http://www.w3school.com.cn/css3/css3_border.asp" target="_blank" rel="external">w3c_CSS3边框讲解页面</a></p>
+</blockquote>
+<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><ul>
+<li><strong>属性名:</strong><ul>
+<li>box-shadow</li>
+</ul>
+</li>
+<li><p><strong>可选值:</strong></p>
+<ul>
+<li>h-shadow:必需。水平阴影的位置。允许负值。</li>
+<li>v-shadow:必需。垂直阴影的位置。允许负值。</li>
+<li>blur:可选。模糊距离。</li>
+<li>spread:可选。阴影的尺寸</li>
+<li>color:可选。阴影的颜色。请参阅 CSS 颜色值。</li>
+<li>inset:可选。将外部阴影 (outset) 改为内部阴影。</li>
+</ul>
+</li>
+<li><p><strong>示例代码</strong></p>
+<ul>
+<li>这里<code>青色</code>的为<code>li</code>标签</li>
+</ul>
+</li>
+</ul>
+<hr>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">box-shadow</span><span class="selector-pseudo">:-10px</span> 20<span class="selector-tag">px</span> <span class="selector-tag">red</span>;</div></pre></td></tr></table></figure>
+<p><img src="imgs/shaw1.png" alt="shaw1.png-1.2kB"></p>
+<hr>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">box-shadow</span>: 5<span class="selector-tag">px</span> 5<span class="selector-tag">px</span> 20<span class="selector-tag">px</span> <span class="selector-tag">pink</span>;</div><div class="line"><span class="comment">/*x偏移值,y偏移值,影子四周模糊程度,影子颜色*/</span></div></pre></td></tr></table></figure>
+<p><img src="imgs/shaw2.png" alt="!\[\](img/shaw2.png)"></p>
+<hr>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">box-shadow</span>: 5<span class="selector-tag">px</span> 5<span class="selector-tag">px</span> 0<span class="selector-tag">px</span> 5<span class="selector-tag">px</span> <span class="selector-tag">red</span>;</div><div class="line"><span class="comment">/*x偏移值,y偏移值,影子四周模糊程度,影子额外的长度,影子颜色*/</span></div><div class="line"><span class="comment">/*影子默认跟元素一样大*/</span></div></pre></td></tr></table></figure>
+<p><img src="imgs/shaw3.png" alt="shaw3.png-1.5kB"></p>
+<hr>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">box-shadow</span>: <span class="selector-tag">inset</span> 0<span class="selector-tag">px</span> 0<span class="selector-tag">px</span> 100<span class="selector-tag">px</span> <span class="selector-tag">yellow</span>;</div><div class="line"><span class="comment">/*添加了inset以后,影子会往内部伸展,其他的都是一样的*/</span></div></pre></td></tr></table></figure>
+<p><img src="imgs/shaw4.png" alt="shaw4.png-15.5kB"></p>
+<hr>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">box-shadow</span>: 5<span class="selector-tag">px</span> 5<span class="selector-tag">px</span> <span class="selector-tag">yellow</span>,<span class="selector-tag">-5px</span> <span class="selector-tag">-5px</span> <span class="selector-tag">blue</span>,10<span class="selector-tag">px</span> 10<span class="selector-tag">px</span> <span class="selector-tag">green</span>;</div><div class="line"><span class="comment">/*多个影子的添加 只需要使用逗号分隔即可 */</span></div></pre></td></tr></table></figure>
+<p><img src="imgs/shaw5.png" alt="shaw5.png-1.7kB"></p>
+<ul>
+<li><strong>注意:</strong><ul>
+<li>这里演示的只是基本用法,实际开发中配合更高的审美观,能够制作更为精美的页面</li>
+</ul>
+</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/01/18/08.边框阴影/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-07.边框圆角" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="边框圆角"><a href="#边框圆角" class="headerlink" title="边框圆角"></a>边框圆角</h1><p>标签（空格分隔）： CSS3</p>
+<hr>
+<p><img src="imgs/desk.jpg" alt="前端与移动学院"></p>
+<blockquote>
+<p>在早期如果想要制作四周有圆角的元素时,需要专门制作一张图片(这其实没什么),但是试想一下,如果要修改圆角的各种关系,比如颜色,半径等等,必须去重新修改图片才能够实现(十分麻烦).<br><br>在<code>html5</code>中针对这个效果专门推出了一个属性<code>border-radius</code><br><a href="http://www.w3school.com.cn/css3/css3_border.asp" target="_blank" rel="external">w3c_CSS3边框讲解页面</a></p>
+</blockquote>
+<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法:"></a>使用方法:</h2><ul>
+<li><strong>属性名:</strong><ul>
+<li>border-radius</li>
+</ul>
+</li>
+<li><strong>赋值方法:</strong> <ul>
+<li>赋值的方法类似于<code>margin</code></li>
+</ul>
+</li>
+</ul>
+<hr>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">background-color</span>: <span class="selector-tag">rebeccapurple</span>;</div><div class="line"><span class="selector-tag">border-radius</span><span class="selector-pseudo">:20px</span>;</div><div class="line"><span class="comment">/*设置四周的圆角*/</span></div></pre></td></tr></table></figure>
+<p><img src="imgs/box1.png" alt="box1.png-2kB"></p>
+<hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">background-color: aqua;</div><div class="line">border-radius: 50px 10px;</div><div class="line">/*上左下右,上右下左 */</div></pre></td></tr></table></figure>
+<p><img src="imgs/box2.png" alt="box2.png-2.3kB"></p>
+<hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">background-color: seagreen;</div><div class="line">border-radius: 50px 30px 10px;</div><div class="line">/*上左,上右下左,下右*/</div></pre></td></tr></table></figure>
+<p><img src="imgs/box3.png" alt="box3.png-2.7kB"></p>
+<hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">background-color: chartreuse;</div><div class="line">border-radius: 50px 40px 30px 20px;</div><div class="line">/*上左,上右,下右,下左*/</div></pre></td></tr></table></figure>
+<p><img src="imgs/box4.png" alt="box4.png-2.4kB"></p>
+<hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">background-color: magenta;</div><div class="line">border-radius: 50px/100px;</div><div class="line">/*上下的圆角/左右的圆角*/</div></pre></td></tr></table></figure>
+<p><img src="imgs/box5.png" alt="box5.png-2.4kB"></p>
+<hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">background-color: palevioletred;</div><div class="line">border-top-left-radius: 40px;</div><div class="line">/*上左*/</div><div class="line">border-top-right-radius: 10px;</div><div class="line">/*上右*/</div><div class="line">border-bottom-left-radius: 20px;</div><div class="line">/*下左*/</div><div class="line">border-bottom-right-radius: 50px;</div><div class="line">/*下右*/</div></pre></td></tr></table></figure>
+<p><img src="imgs/box6.png" alt="box6.png-2.8kB"></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结:"></a><strong>总结:</strong></h2><blockquote>
+<p>该属性的用法十分简单,只要搞清楚四边的对应关系,就能够制作各种精美组合效果</p>
+</blockquote>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/01/18/07.边框圆角/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-10.盒子模型" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="盒子模型"><a href="#盒子模型" class="headerlink" title="盒子模型"></a>盒子模型</h1><p>标签（空格分隔）： CSS3</p>
+<hr>
+<p><img src="imgs/desk.jpg" alt="前端与移动开发学院"></p>
+<blockquote>
+<p>文档中的每个元素被描绘为矩形盒子。渲染引擎的目的就是判定大小，属性——比如它的颜色、背景、边框方面——及这些盒子的位置。<br><br>在CSS中，这些矩形盒子用 标准盒模型 来描述。这个模型描述了一个元素所占用的空间。每一个盒子有四条边界：外边距边界margin edge, 边框边界border edge, 内边距边界padding edge 与 内容边界content edge。<br><img src="imgs/盒子模型.png" alt="盒子模型.png-3.4kB"></p>
+</blockquote>
+<p>##盒子尺寸计算_默认状态</p>
+<ul>
+<li><strong>盒子width:</strong><ul>
+<li>width + border*2 + 左右padding</li>
+<li>虽然这样计算盒子的大小逻辑并不复杂,但是如果想要元素精确的是多少px需要修改的值较多</li>
+</ul>
+</li>
+</ul>
+<p>##box-sizing属性</p>
+<blockquote>
+<p>box-sizing 属性用来改变默认的 CSS 盒模型 对元素宽高的计算方式</p>
+</blockquote>
+<ul>
+<li>属性取值:<ul>
+<li>content-box:<ul>
+<li>默认的取值就是<code>content-box</code></li>
+</ul>
+</li>
+<li>border-box:<ul>
+<li>修改为该值以后盒子的尺寸直接就是<code>宽度</code>跟<code>高度</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><strong>测试代码:</strong></li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>盒子模型<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></div><div class="line">        <span class="selector-tag">div</span>&#123;</div><div class="line">            <span class="attribute">width</span>: <span class="number">200px</span>;</div><div class="line">            <span class="attribute">height</span>: <span class="number">200px</span>;</div><div class="line">            <span class="attribute">background-color</span>: coral;</div><div class="line">        &#125;</div><div class="line">        <span class="selector-class">.top</span> &#123;</div><div class="line">            <span class="attribute">border</span>: <span class="number">10px</span> solid <span class="number">#0094ff</span>;</div><div class="line">            <span class="attribute">padding</span>: <span class="number">20px</span>;</div><div class="line">            <span class="attribute">margin</span>:<span class="number">20px</span>;</div><div class="line">            <span class="attribute">box-sizing</span>: content-box;</div><div class="line">        &#125;</div><div class="line">        <span class="selector-class">.second</span>&#123;</div><div class="line">            <span class="attribute">border</span>: <span class="number">10px</span> solid <span class="number">#0094ff</span>;</div><div class="line">            <span class="attribute">padding</span>: <span class="number">20px</span>;</div><div class="line">            <span class="attribute">margin</span>:<span class="number">20px</span>;</div><div class="line">            <span class="attribute">box-sizing</span>: border-box;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"top"</span>&gt;</span>top盒子</div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"second"</span>&gt;</span>second盒子<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<ul>
+<li>**运行效果:</li>
+</ul>
+<p><img src="imgs/盒子模型预览.png" alt="盒子模型预览.png-9.4kB"></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/01/18/10.盒子模型/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-06.颜色" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
